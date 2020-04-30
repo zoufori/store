@@ -38,7 +38,10 @@
         <!-- 关闭跨域请求 -->
         <security:csrf disabled="true"/>
         <security:cors configuration-source-ref="corsConfigurationSource" />
+        <security:headers>
+            <security:frame-options disabled="true"/>
 
+        </security:headers>
         <!-- 退出 -->
         <security:logout invalidate-session="true" logout-url="/logout.do" logout-success-url="/login.jsp" />
 

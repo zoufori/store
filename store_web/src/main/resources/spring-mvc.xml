@@ -17,11 +17,17 @@
     <!-- 扫描controller的注解，别的不扫描-->
     <context:component-scan base-package="com.jimmy.controller">
     </context:component-scan>
-
+<!--    文件传输配置-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设置默认编码 -->
+        <property name="defaultEncoding" value="utf-8"></property>
+        <!-- 上传图片最大大小5M-->
+        <property name="maxUploadSize" value="5242440"></property>
+    </bean>
     <!-- 配置视图解析器-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!-- JSP文件所在的目录 -->
-        <property name="prefix" value="/web/" />
+        <property name="prefix" value="" />
         <!-- 文件的后缀名-->
         <property name="suffix" value=".jsp" />
     </bean>

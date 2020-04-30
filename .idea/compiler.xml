@@ -9,8 +9,8 @@
         <module name="store_web" />
         <module name="store_domain" />
         <module name="store_dao" />
-        <module name="store_utils" />
         <module name="store_service" />
+        <module name="store_utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

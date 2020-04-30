@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service("userService")
@@ -23,7 +24,12 @@ public class UUsersServiceImpl implements IUUsersService {
 
     @Override
     public Integer saveOrUpdate(UUsers users) throws Exception {
-        return users.getId() == null ? usersDao.save(users) : usersDao.update(users);
+        if(users.getId() == null){
+            users.setDate(new Date());
+            return usersDao.save(users);
+        }else {
+            return usersDao.update(users);
+        }
     }
 
     @Override

@@ -2,12 +2,12 @@ package com.jimmy.controller;
 
 import com.jimmy.domain.UUsers;
 import com.jimmy.service.IUUsersService;
+import com.jimmy.utils.BCryptPasswordUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -91,8 +91,9 @@ public class PersonalPageController {
         return "redirect:";
     }
 
+    @ResponseBody
     @RequestMapping("/doAddUser")
-    public String doAddUser(UUsers users, @RequestParam("img") MultipartFile img, HttpServletRequest request) throws Exception{
+    public void doAddUser(@RequestParam("img") MultipartFile img, UUsers users, HttpServletRequest request) throws Exception{
         users.setRole("USER");
         String realPath = request.getSession().getServletContext().getRealPath("/img");
         String imgUrl = img.getOriginalFilename();
@@ -107,9 +108,9 @@ public class PersonalPageController {
 
         users.setHead_img(newImgName);
 
-        users.setDate(new Date());
+        users.setPassword(BCryptPasswordUtils.getEncoderPassword(users.getPassword()));
         service.saveOrUpdate(users);
-        return "redirect:http://localhost:8888/storeBackstage/user/addUser.do";
+
     }
 
     private UUsers getUser(String username) throws Exception{
