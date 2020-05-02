@@ -2,11 +2,188 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25c575f3-bb4b-4000-9591-1e0376e20a14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/IUGoodsSellService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/IUOrdersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/impl/UCommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/impl/UGoodsSellServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/AD/ad-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/AD/ad-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/AD/ad-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/address.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/cart.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/jquery-labelauty.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/safe/Snaddress.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/safe/common.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/safe/css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/safe/ms-style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/safe/personal_member.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/style1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/style2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/supplie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/user_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/goods.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/goodsDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/01_mid.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/01_small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/02_mid.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/02_small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/03_mid.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/03_small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/04_mid.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/04_small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/Account-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/Complex_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/MbrAtHLGP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/NTngAG7pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/NTo2Wh8TF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/Search_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/Service3-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/TB27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/bg_Filter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/bk_img_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/bk_img_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/bk_img_19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/bk_img_22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/close2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/commentstar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/d_toux_img_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/h1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/h2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/h3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/h4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/h5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/help_m_jia.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/icon-copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/iconfont-liuyan-alt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/iconfont-shoucang.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/iconfont-shoucang2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/iconfont-xingxingkong.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/iconfont-xingxingkong_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/iconfont-xingxingman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/iconfont-xingxingman_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/indexhead_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/input-checked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/l-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/l_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/l_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/login-pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/m_i_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/m_i_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/m_i_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/m_i_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/muen_bg_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/new-pro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/p_032.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/people.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/pro-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/pro_V2_r17_c4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/provider/chacha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/provider/iconfont-jia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/provider/jia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/provider/jian.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/search.ele.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/settleup-nogoods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/shop_logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/slider-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/user_img_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/user_img_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/user_img_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/user_img_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/user_img_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/user_img_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/zfb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/zhifu1_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/zhifu1_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/images/zhifu1_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/accordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/common_js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/icheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/jquery-1.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/jquery-2.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/jquery-labelauty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/jquery.SuperSlide.2.1.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/jquery.imagezoom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/jquery.simpleGal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/lrtk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/safe/aywmq_qt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/js/safe/da_opt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/layer/extend/layer.ext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/layer/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/layer/skin/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/layer/skin/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/layer/skin/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/layer/skin/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/layer/skin/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/layer/skin/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/layer/skin/layer.ext.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/orders.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/personal.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/personalMsg.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/plugins/laydate/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/plugins/laydate/need/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/plugins/laydate/skins/dahong/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/plugins/laydate/skins/dahong/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/plugins/laydate/skins/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/plugins/laydate/skins/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/plugins/laydate/skins/molv/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/plugins/laydate/skins/molv/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/cp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/1089.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/1145.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/1208.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/1252.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/1270.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/1309.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/1396.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/152.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/156.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/1663.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/199.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/245.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/339.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/458.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/6116.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/618.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/644.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/690.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/740.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/741.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/logo1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/logo/logo2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/p_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/p_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/p_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/p_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/products/p_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/skins/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/skins/flat/_all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/skins/flat/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_web/src/main/webapp/skins/flat/green.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/impl/UUsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/impl/UUsersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/goods.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/goodsDetail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/personal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/webapp/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +214,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -62,7 +240,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/store_web/src/main/webapp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -73,9 +251,9 @@
       <recent name="com.jimmy.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\java\store\store_web\src\main\webapp" />
       <recent name="F:\java\store\sql" />
       <recent name="F:\java\store\store_web\src\main\resources" />
-      <recent name="F:\java\store\store_web\src\main\webapp" />
       <recent name="F:\java\store\store_web\src\main\java\com\jimmy\controller" />
       <recent name="F:\java\store\store_utils\src\main\java\com\jimmy\utils" />
     </key>
@@ -137,6 +315,7 @@
       <workItem from="1587947982895" duration="13143000" />
       <workItem from="1588037523344" duration="7908000" />
       <workItem from="1588244368396" duration="3839000" />
+      <workItem from="1588383176017" duration="2602000" />
     </task>
     <task id="LOCAL-00001" summary="4.30">
       <created>1588260275237</created>
@@ -163,7 +342,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -192,10 +373,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586266074688" />
-    <state x="0" y="10" key="CommitChangelistDialog2" timestamp="1588264254641">
+    <state x="0" y="10" key="CommitChangelistDialog2" timestamp="1588264477447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588264254641" />
+    <state x="0" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588264477447" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588063780791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -224,10 +405,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="84" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587899103936" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588244371221">
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588383353328">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588244371221" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588383353328" />
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588385671064">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588385671064" />
     <state x="258" y="80" key="new project wizard" timestamp="1586267173521">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -236,5 +421,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587904085337" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/IUUsersService.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

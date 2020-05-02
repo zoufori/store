@@ -1,37 +1,31 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>注册</title>
+    <title>登录</title>
     <link rel="stylesheet" href="./css/login.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     
     <form action="index.jsp" class="login-form">
-        <h1>立即注册</h1>
+        <h1>欢迎登录</h1>
 
         <div class="txtb">
             <input type="text">
-            <span data-placeholder="邮箱"></span>
-        </div>
-        <div class="txtb">
-            <input type="password">
-            <span data-placeholder="手机"></span>
+            <span data-placeholder="邮箱/手机"></span>
         </div>
         <div class="txtb">
             <input type="password">
             <span data-placeholder="密码"></span>
         </div>
-        <div class="txtb">
-            <input type="password">
-            <span data-placeholder="确认密码"></span>
-        </div>
 
-        <input type="submit" class="logbtn" value="注册">
+        <input type="submit" class="logbtn" value="登录">
 
         <div class="bottom-text">
-            已有账户?立即<a href="#">登录</a>
+            没有账户?立即<a href="#">注册</a>
         </div>
     </form>
 

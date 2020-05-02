@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -62,14 +61,15 @@ public class UUsersServiceImpl implements IUUsersService {
 
         UUsers users;
         User user = null;
-
+        List<SimpleGrantedAuthority> authorities=null;
         try {
+            authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
             if(s.contains("@")){
                 users = usersDao.findByEmail(s);
-                user = new User(users.getEmail(), users.getPassword(), getAuthority(users.getRole()));
+                user = new User(users.getEmail(), users.getPassword(), authorities);
             }else{
                 users = usersDao.findByTelephone(s);
-                user = new User(users.getTelephone(), users.getPassword(), getAuthority(users.getRole()));
+                user = new User(users.getTelephone(), users.getPassword(), authorities);
             }
 
         }catch (Exception e){
@@ -79,7 +79,7 @@ public class UUsersServiceImpl implements IUUsersService {
         return user;
     }
 
-    private List<SimpleGrantedAuthority> getAuthority(String role){
+/*    private List<SimpleGrantedAuthority> getAuthority(String role){
         List<SimpleGrantedAuthority> list = new ArrayList<>();
         String[] roles = role.split(",");
 
@@ -88,6 +88,6 @@ public class UUsersServiceImpl implements IUUsersService {
         }
 
         return list;
-    }
+    }*/
 }
 
