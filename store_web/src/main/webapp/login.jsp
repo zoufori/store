@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
@@ -15,13 +15,14 @@
 
         <div class="txtb">
             <input type="text">
-            <span data-placeholder="邮箱/手机"></span>
+            <span data-placeholder="邮箱/手机" name="username"></span>
         </div>
         <div class="txtb">
             <input type="password">
-            <span data-placeholder="密码"></span>
+            <span data-placeholder="密码" name="password"></span>
         </div>
-
+        <input type="checkbox" name="remember-me" id="remember-me" class="remember-me">
+        <label for="remember-me">记住我</label>
         <input type="submit" class="logbtn" value="登录">
 
         <div class="bottom-text">

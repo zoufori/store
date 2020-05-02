@@ -4,17 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/common.css" rel="stylesheet" type="text/css" />
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/user_style.css" rel="stylesheet" type="text/css" />
-<link href="skins/all.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
-<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
-<script src="js/common_js.js" type="text/javascript"></script>
-<script src="js/footer.js" type="text/javascript"></script>
-<script src="layer/layer.js" type="text/javascript"></script>
-<script src="js/iCheck.js" type="text/javascript"></script>
-<script src="js/custom.js" type="text/javascript"></script>
+<link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/user_style.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/skins/all.css" rel="stylesheet" type="text/css" />
+<script src="${pageContext.request.contextPath}/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/common_js.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/footer.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/layer/layer.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/iCheck.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/custom.js" type="text/javascript"></script>
 <title>用户中心-收货地址</title>
 </head>
 

@@ -7,14 +7,20 @@
     http://www.springframework.org/schema/security
     http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <security:global-method-security jsr250-annotations="disabled" secured-annotations="disabled" pre-post-annotations="enabled"></security:global-method-security>
+    <security:global-method-security jsr250-annotations="disabled" secured-annotations="disabled"
+                                     pre-post-annotations="enabled"></security:global-method-security>
 
     <!-- 配置不拦截的资源 -->
     <security:http pattern="/login.jsp" security="none"/>
-    <security:http pattern="/failer.jsp" security="none"/>
     <security:http pattern="/css/**" security="none"/>
     <security:http pattern="/img/**" security="none"/>
     <security:http pattern="/plugins/**" security="none"/>
+    <security:http pattern="/images/**" security="none" />
+    <security:http pattern="/js/**" security="none" />
+    <security:http pattern="/skins/**" security="none" />
+    <security:http pattern="/products/**" security="none" />
+    <security:http pattern="/layer/**" security="none" />
+    <security:http pattern="/AD/**" security="none" />
 
     <!--
     	配置具体的规则
@@ -24,26 +30,27 @@
     <security:http auto-config="true" use-expressions="true">
         <!-- 配置具体的拦截的规则 pattern="请求路径的规则" access="访问系统的人，必须有ROLE_USER的角色" -->
         <security:intercept-url pattern="/personal/doAddUser" access="permitAll()"/>
+        <security:intercept-url pattern="/goods/doAddGoods" access="permitAll()"/>
         <security:intercept-url pattern="/**" access="hasAnyRole('ROLE_USER')"/>
-
         <!-- 定义跳转的具体的页面 -->
         <security:form-login
                 login-page="/login.jsp"
-                login-processing-url="/login.do"
+                login-processing-url="/login"
                 default-target-url="/index.jsp"
                 authentication-failure-url="/failer.jsp"
                 authentication-success-forward-url="/pages/main.jsp"
         />
-
+        <security:remember-me remember-me-parameter="rememeber-me" remember-me-cookie="asdcasdcasd"
+                              token-validity-seconds="604800"/>
         <!-- 关闭跨域请求 -->
         <security:csrf disabled="true"/>
-        <security:cors configuration-source-ref="corsConfigurationSource" />
+        <security:cors configuration-source-ref="corsConfigurationSource"/>
         <security:headers>
             <security:frame-options disabled="true"/>
 
         </security:headers>
         <!-- 退出 -->
-        <security:logout invalidate-session="true" logout-url="/logout.do" logout-success-url="/login.jsp" />
+        <security:logout invalidate-session="true" logout-url="/logout" logout-success-url="/login.jsp"/>
 
     </security:http>
 

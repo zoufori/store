@@ -1,3 +1,4 @@
+com\jimmy\aop\GoodsAop.class
 com\jimmy\controller\PersonalPageController.class
 com\jimmy\controller\CartController.class
 com\jimmy\controller\RegisterController.class
@@ -6,4 +7,3 @@ com\jimmy\controller\IndexController.class
 com\jimmy\controller\GoodsDetailController.class
 com\jimmy\controller\OrderController.class
 com\jimmy\controller\GoodsController.class
-com\jimmy\filter\CorsFilter.class
