@@ -10,7 +10,7 @@ public class UGoods {
 
     private Integer id;
     private String name;
-    private UGoodsType type;
+    private Integer typeid;
     private Double discount;
     private Double price;
     private String desc;
@@ -19,14 +19,14 @@ public class UGoods {
     private String content_img;
     private String[] content_img_arr;
     private String content;
-    private List<UComment> comments;
+    private Integer commentid;
     private Integer inventory;
     private Long clicked;
     private String address;
     private Date date;
     private String dateStr;
-    private Integer isRecommend;
-    private UGoodsSell sell;
+    private Integer is_recommend;
+    private Integer month_sellid;
 
     public Integer getId() {
         return id;
@@ -42,14 +42,6 @@ public class UGoods {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public UGoodsType getType() {
-        return type;
-    }
-
-    public void setType(UGoodsType type) {
-        this.type = type;
     }
 
     public Double getDiscount() {
@@ -117,14 +109,6 @@ public class UGoods {
         this.content = content;
     }
 
-    public List<UComment> getComments() {
-        return comments;
-    }
-
-    public void setComments(List<UComment> comments) {
-        this.comments = comments;
-    }
-
     public Integer getInventory() {
         return inventory;
     }
@@ -166,19 +150,35 @@ public class UGoods {
         this.dateStr = dateStr;
     }
 
-    public Integer getIsRecommend() {
-        return isRecommend;
+    public Integer getIs_recommend() {
+        return is_recommend;
     }
 
-    public void setIsRecommend(Integer isRecommend) {
-        this.isRecommend = isRecommend;
+    public void setIs_recommend(Integer is_recommend) {
+        this.is_recommend = is_recommend;
     }
 
-    public UGoodsSell getSell() {
-        return sell;
+    public Integer getTypeid() {
+        return typeid;
     }
 
-    public void setSell(UGoodsSell sell) {
-        this.sell = sell;
+    public void setTypeid(Integer typeid) {
+        this.typeid = typeid;
+    }
+
+    public Integer getMonth_sellid() {
+        return month_sellid;
+    }
+
+    public void setMonth_sellid(Integer month_sellid) {
+        this.month_sellid = month_sellid;
+    }
+
+    public Integer getCommentid() {
+        return commentid;
+    }
+
+    public void setCommentid(Integer commentid) {
+        this.commentid = commentid;
     }
 }

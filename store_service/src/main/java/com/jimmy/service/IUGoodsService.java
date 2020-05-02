@@ -19,4 +19,6 @@ public interface IUGoodsService {
     List<UGoods> getHotGoods() throws Exception;
 
     List<UGoods> getRecommendedGoods() throws Exception;
+
+    Integer saveOrUpdate(UGoods goods) throws Exception;
 }

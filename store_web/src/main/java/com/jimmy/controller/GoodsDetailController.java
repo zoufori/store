@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -43,6 +44,7 @@ public class GoodsDetailController {
         return mv;
     }
 
+    @RequestMapping("/doAddCart")
     public void addCart(@RequestParam("goodsid") Integer id) throws Exception{
         UOrders orders = null;
 
@@ -50,7 +52,13 @@ public class GoodsDetailController {
         if (principal instanceof UserDetails){
             String username = ((UserDetails) principal).getUsername();
             UUsers user = getUser(username);
-            orders.set
+            orders.setGoodsid(id);
+            orders.setIs_cancel(0);
+            orders.setIs_cart(1);
+            orders.setIs_paid(0);
+            orders.setOrder_time(new Date());
+            orders.setUsersid(user.getId());
+            ordersService.save(orders);
         }
     }
 

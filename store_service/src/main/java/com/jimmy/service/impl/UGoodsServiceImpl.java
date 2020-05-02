@@ -56,4 +56,9 @@ public class UGoodsServiceImpl implements IUGoodsService {
     public List<UGoods> getRecommendedGoods() throws Exception{
         return goodsDao.getRecommendedGoods();
     }
+
+    @Override
+    public Integer saveOrUpdate(UGoods goods) throws Exception {
+        return goods.getId() == null ? goodsDao.save(goods) : goodsDao.update(goods);
+    }
 }
