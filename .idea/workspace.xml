@@ -3,51 +3,42 @@
   <component name="ChangeListManager">
     <list default="true" id="25c575f3-bb4b-4000-9591-1e0376e20a14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_dao/target/classes/com/jimmy/dao/IUCommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_dao/target/classes/com/jimmy/dao/IUCommentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_dao/target/classes/com/jimmy/dao/IUGoodsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_dao/target/classes/com/jimmy/dao/IUGoodsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/store.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/store.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_dao/src/main/java/com/jimmy/dao/IUOrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_dao/src/main/java/com/jimmy/dao/IUOrdersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_dao/src/main/java/com/jimmy/dao/IUUsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_dao/src/main/java/com/jimmy/dao/IUUsersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_dao/target/classes/com/jimmy/dao/IUUsersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_dao/target/classes/com/jimmy/dao/IUUsersDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/store_dao/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_dao/target/store_dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/store_dao/target/store_dao-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_domain/target/classes/com/jimmy/domain/UGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_domain/target/classes/com/jimmy/domain/UGoods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_domain/src/main/java/com/jimmy/domain/UOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_domain/src/main/java/com/jimmy/domain/UOrders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_domain/src/main/java/com/jimmy/domain/UUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_domain/src/main/java/com/jimmy/domain/UUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_domain/target/classes/com/jimmy/domain/UOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_domain/target/classes/com/jimmy/domain/UOrders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_domain/target/classes/com/jimmy/domain/UUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_domain/target/classes/com/jimmy/domain/UUsers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_domain/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/store_domain/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_domain/target/store_domain-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/store_domain/target/store_domain-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_service/target/classes/com/jimmy/service/IUGoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/target/classes/com/jimmy/service/IUGoodsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_service/target/classes/com/jimmy/service/impl/UGoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/target/classes/com/jimmy/service/impl/UGoodsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/IUOrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/IUOrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/IUUsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/IUUsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/impl/UOrdersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/impl/UOrdersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/impl/UUsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/impl/UUsersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_service/target/classes/com/jimmy/service/IUUsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/target/classes/com/jimmy/service/IUUsersService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_service/target/classes/com/jimmy/service/impl/UUsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/target/classes/com/jimmy/service/impl/UUsersServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_service/target/store_service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/store_service/target/store_service-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_utils/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/store_utils/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_utils/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store_utils/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_utils/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store_utils/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_utils/target/store_utils-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/store_utils/target/store_utils-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/java/com/jimmy/controller/CartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/java/com/jimmy/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/java/com/jimmy/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/java/com/jimmy/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/java/com/jimmy/controller/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_web/src/main/resources/spring-security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/resources/spring-security.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/address.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/webapp/address.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/webapp/cart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/webapp/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/src/main/webapp/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/src/main/webapp/orders.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store_web/store_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/store_web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/config/CorsConfig.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/controller/CartController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/controller/GoodsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/controller/GoodsDetailController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/controller/IndexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/controller/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/controller/PersonalPageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/controller/RegisterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/myKaptcha.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/spring-mvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/classes/spring-security.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/tomcat/conf/logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/tomcat/conf/tomcat-users.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_web/target/tomcat/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/target/classes/com/jimmy/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/target/classes/spring-security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/target/classes/spring-security.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store_web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +69,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
@@ -108,7 +100,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -179,7 +171,11 @@
       <workItem from="1587947982895" duration="13143000" />
       <workItem from="1588037523344" duration="7908000" />
       <workItem from="1588244368396" duration="3839000" />
-      <workItem from="1588383176017" duration="17579000" />
+      <workItem from="1588383176017" duration="19402000" />
+      <workItem from="1588475781929" duration="7400000" />
+      <workItem from="1588559402532" duration="15686000" />
+      <workItem from="1588733397010" duration="14152000" />
+      <workItem from="1588819259842" duration="538000" />
     </task>
     <task id="LOCAL-00001" summary="4.30">
       <created>1588260275237</created>
@@ -216,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588418671062</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="5.2.2">
+      <created>1588429582039</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588429582039</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,58 +251,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1586265566832" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586869483370">
+    <state x="225" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588781938108">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586869483370" />
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1588417896552">
+    <state x="225" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588781938108" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1588784012827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588417896552" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588784012827" />
     <state x="510" y="384" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1588428914778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="384" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1536.824@0.0.1536.824" timestamp="1588428914778" />
+    <state x="582" y="318" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1588749549085">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="582" y="318" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1536.824@0.0.1536.824" timestamp="1588749549085" />
     <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1586266074688">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586266074688" />
-    <state x="0" y="10" key="CommitChangelistDialog2" timestamp="1588418666599">
+    <state x="0" y="10" key="CommitChangelistDialog2" timestamp="1588429575958">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588418666599" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588063780791">
+    <state x="0" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588429575958" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588749547826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588063780791" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1588429209700">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588749547826" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1588782070549">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588429209700" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1588429209700">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588782070549" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1588782070549">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588429209700" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1588429209700">
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588782070549" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1588782070549">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588429209700" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1588429209700">
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588782070547" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1588782070549">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588429209700" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588782070549" />
     <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1586265118696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1586265118696" />
-    <state x="274" y="0" key="SettingsEditor" timestamp="1588428925794">
+    <state x="274" y="0" key="SettingsEditor" timestamp="1588819801782">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="274" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588428925794" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588383353328">
+    <state x="274" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588819801782" />
+    <state width="504" height="446" key="SwitcherDM" timestamp="1588784645634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588383353328" />
+    <state width="504" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1588784645634" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588819413559">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588819413559" />
     <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588385671064">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -312,5 +323,23 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587904085337" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588782433813">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588782433813" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/store_service/src/main/java/com/jimmy/service/IUOrdersService.java</url>
+          <line>25</line>
+          <properties class="com.jimmy.service.IUOrdersService" method="findByUserid">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

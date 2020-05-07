@@ -16,7 +16,16 @@ public class UUsers {
     private String role;
     private Date date;
     private String dateStr;
+    private Integer money;
     private Integer is_ban;
+
+    public Integer getMoney() {
+        return money;
+    }
+
+    public void setMoney(Integer money) {
+        this.money = money;
+    }
 
     public Date getDate() {
         return date;

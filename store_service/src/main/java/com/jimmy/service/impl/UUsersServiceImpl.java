@@ -32,13 +32,25 @@ public class UUsersServiceImpl implements IUUsersService {
     }
 
     @Override
+    public Integer detractMoney(Integer total, Integer id) throws Exception {
+        UUsers byId = usersDao.findById(id);
+        Integer money = byId.getMoney();
+        if(money < total) {
+            return -1;
+        } else {
+            money -= total;
+            return usersDao.detractMoney(money, id);
+        }
+    }
+
+    @Override
     public Integer update(UUsers users) throws Exception {
-        return null;
+        return usersDao.update(users);
     }
 
     @Override
     public Integer register(UUsers users) throws Exception {
-        return null;
+        return usersDao.save(users);
     }
 
     @Override
@@ -66,10 +78,10 @@ public class UUsersServiceImpl implements IUUsersService {
             authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
             if(s.contains("@")){
                 users = usersDao.findByEmail(s);
-                user = new User(users.getEmail(), users.getPassword(), authorities);
+                user = new User(users.getEmail(), users.getPassword(), users.getIs_ban() == 2, true, true,true, authorities);
             }else{
                 users = usersDao.findByTelephone(s);
-                user = new User(users.getTelephone(), users.getPassword(), authorities);
+                user = new User(users.getTelephone(), users.getPassword(),users.getIs_ban() == 2, true,true, true, authorities);
             }
 
         }catch (Exception e){

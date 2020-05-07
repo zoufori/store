@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 毕业设计
+ Source Server         : localhost_3306
  Source Server Type    : MySQL
  Source Server Version : 50719
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 01/05/2020 00:29:47
+ Date: 06/05/2020 10:49:52
 */
 
 SET NAMES utf8mb4;
@@ -151,6 +151,7 @@ CREATE TABLE `u_orders`  (
   `userid` int(11) NULL DEFAULT NULL,
   `goodsid` int(11) NULL DEFAULT NULL,
   `order_time` datetime(0) NULL DEFAULT NULL COMMENT '下单时间',
+  `count` int(11) NULL DEFAULT NULL COMMENT '商品数量',
   `receive_time` datetime(0) NULL DEFAULT NULL COMMENT '收货时间',
   `is_cart` smallint(2) NULL DEFAULT NULL COMMENT '是否在购物车中 1、是  0、否',
   `is_paid` smallint(2) NULL DEFAULT NULL COMMENT '是否已付款 1、已付 0、未付',
@@ -172,6 +173,7 @@ CREATE TABLE `u_users`  (
   `gender` smallint(2) NULL DEFAULT NULL,
   `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `role` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'SELLER:商家  USER:用户',
+  `money` bigint(30) NULL DEFAULT NULL COMMENT '账户余额',
   `date` datetime(0) NULL DEFAULT NULL COMMENT '加入时间',
   `is_ban` smallint(2) NULL DEFAULT NULL COMMENT '是否被禁 1、是 2、否',
   PRIMARY KEY (`id`) USING BTREE

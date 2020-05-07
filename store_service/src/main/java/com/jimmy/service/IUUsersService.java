@@ -16,4 +16,6 @@ public interface IUUsersService extends UserDetailsService{
     Integer register(UUsers users) throws Exception;
 
     Integer saveOrUpdate(UUsers users) throws Exception;
+
+    Integer detractMoney(Integer total, Integer id) throws Exception;
 }

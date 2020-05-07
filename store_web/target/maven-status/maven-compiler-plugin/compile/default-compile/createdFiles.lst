@@ -1,6 +1,5 @@
 com\jimmy\aop\GoodsAop.class
 com\jimmy\controller\PersonalPageController.class
-com\jimmy\controller\CartController.class
 com\jimmy\controller\RegisterController.class
 com\jimmy\config\CorsConfig.class
 com\jimmy\controller\IndexController.class

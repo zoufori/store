@@ -19,21 +19,24 @@ public interface IUUsersDao {
     UUsers findById(Integer id) throws Exception;
 
     @Insert("insert into u_users" +
-            "(username, password, telephone, email, head_img, gender, address, role, date, is_ban) values" +
-            "(#{username},#{password}, #{telephone}, #{email}, #{head_img}, #{gender}, #{address}, #{role}, #{date}, #{is_ban})")
+            "(username, password, telephone, email, head_img, gender, address, role, money, date, is_ban) values" +
+            "(#{username},#{password}, #{telephone}, #{email}, #{head_img}, #{gender}, #{address}, #{money}, #{role}, #{date}, #{is_ban})")
     Integer save(UUsers users) throws Exception;
 
     @Update("update u_users set" +
             "username = #{username}," +
-            "password = #{password}," +
             "telephone = #{telephone}," +
             "email = #{email}," +
             "head_img = #{head_img}," +
             "gender = #{gender}," +
             "address = #{address}," +
             "role = #{role}," +
+            "money = #{money}," +
             "date = #{date}," +
             "is_ban = #{is_ban}" +
             "where id = #{id}")
     Integer update(UUsers users) throws Exception;
+
+    @Update("update u_users set money = #{money} where id = #{id}")
+    Integer detractMoney(Integer money, Integer id) throws Exception;
 }

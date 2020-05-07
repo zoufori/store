@@ -31,14 +31,19 @@
         <!-- 配置具体的拦截的规则 pattern="请求路径的规则" access="访问系统的人，必须有ROLE_USER的角色" -->
         <security:intercept-url pattern="/personal/doAddUser" access="permitAll()"/>
         <security:intercept-url pattern="/goods/doAddGoods" access="permitAll()"/>
+        <security:intercept-url pattern="/index/" access="permitAll()" />
+        <security:intercept-url pattern="/goods/" access="permitAll()" />
+        <security:intercept-url pattern="/goods/search" access="permitAll()" />
+        <security:intercept-url pattern="/goods/type" access="permitAll()" />
+        <security:intercept-url pattern="/goodsDetail/" access="permitAll()" />
         <security:intercept-url pattern="/**" access="hasAnyRole('ROLE_USER')"/>
         <!-- 定义跳转的具体的页面 -->
         <security:form-login
                 login-page="/login.jsp"
                 login-processing-url="/login"
                 default-target-url="/index.jsp"
-                authentication-failure-url="/failer.jsp"
-                authentication-success-forward-url="/pages/main.jsp"
+                authentication-failure-url="/login.jsp"
+                authentication-success-forward-url="/index.jsp"
         />
         <security:remember-me remember-me-parameter="rememeber-me" remember-me-cookie="asdcasdcasd"
                               token-validity-seconds="604800"/>

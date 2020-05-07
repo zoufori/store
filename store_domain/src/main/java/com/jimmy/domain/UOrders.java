@@ -10,13 +10,49 @@ public class UOrders {
     private Integer id;
     private Integer usersid;
     private Integer goodsid;
+    private Double goods_discount;
+    private String goods_thumb_img;
+    private String goods_name;
     private Date order_time;
+    private Integer count;
     private Date receive_time;
     private String orderTimeStr;
     private String receiveTimeStr;
     private Integer is_cart;
     private Integer is_paid;
     private Integer is_cancel;
+
+    public Double getGoods_discount() {
+        return goods_discount;
+    }
+
+    public void setGoods_discount(Double goods_discount) {
+        this.goods_discount = goods_discount;
+    }
+
+    public String getGoods_thumb_img() {
+        return goods_thumb_img;
+    }
+
+    public void setGoods_thumb_img(String goods_thumb_img) {
+        this.goods_thumb_img = goods_thumb_img;
+    }
+
+    public String getGoods_name() {
+        return goods_name;
+    }
+
+    public void setGoods_name(String goods_name) {
+        this.goods_name = goods_name;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
 
     public Integer getId() {
         return id;
@@ -59,6 +95,7 @@ public class UOrders {
     }
 
     public String getOrderTimeStr() {
+        orderTimeStr = DateUtils.date2String(order_time, "yyyy-MM-dd");
         return orderTimeStr;
     }
 
