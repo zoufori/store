@@ -5,28 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     
-    <form action="index.jsp" class="login-form">
+    <form action="${pageContext.request.contextPath}/register/doRegister" method="post" class="login-form">
         <h1>立即注册</h1>
 
         <div class="txtb">
-            <input type="text">
+            <input type="text" name="email">
             <span data-placeholder="邮箱"></span>
         </div>
         <div class="txtb">
-            <input type="password">
+            <input type="password" name="telephone">
             <span data-placeholder="手机"></span>
         </div>
         <div class="txtb">
-            <input type="password">
+            <input type="password" name="password" id="password">
             <span data-placeholder="密码"></span>
         </div>
         <div class="txtb">
-            <input type="password">
+            <input type="password" id="cpassword">
             <span data-placeholder="确认密码"></span>
         </div>
 
@@ -38,6 +38,13 @@
     </form>
 
     <script type="text/javascript">
+        $('.login-form').submit(function () {
+            if($('#password').val() != $('#cpassword').val()){
+                alert("两次密码输入不正确");
+                return false;
+            }
+        });
+
         $(".txtb input").on('focus', function(){
             $(this).addClass("focus");
         });

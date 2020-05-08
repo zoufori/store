@@ -1,13 +1,8 @@
 package com.jimmy.controller;
 
-import com.jimmy.domain.UComment;
-import com.jimmy.domain.UGoods;
-import com.jimmy.domain.UOrders;
-import com.jimmy.domain.UUsers;
-import com.jimmy.service.IUCommentService;
-import com.jimmy.service.IUGoodsService;
-import com.jimmy.service.IUOrdersService;
-import com.jimmy.service.IUUsersService;
+import com.jimmy.domain.*;
+import com.jimmy.service.*;
+import com.jimmy.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,16 +26,21 @@ public class GoodsDetailController {
     private IUOrdersService ordersService;
     @Autowired
     private IUUsersService usersService;
+    @Autowired
+    private IUGoodsSellService goodsSellService;
 
     @RequestMapping("/")
     public ModelAndView show(@RequestParam("goodsid")Integer id) throws Exception{
         ModelAndView mv = new ModelAndView();
         UGoods goods = service.getById(id);
         List<UComment> comments = commentService.findByGoodsid(id);
+        String date = DateUtils.date2String(new Date(), "yyyy-MM");
+        UGoodsSell sell = goodsSellService.getSell(goods.getId(), date);
 
-        mv.addObject("", comments);
-        mv.addObject("", goods);
-        mv.setViewName("");
+        mv.addObject("sell", sell.getSell());
+        mv.addObject("commentsList", comments);
+        mv.addObject("goods", goods);
+        mv.setViewName("goodsDetail");
         return mv;
     }
 

@@ -1,6 +1,10 @@
 package com.jimmy.controller;
 
+import com.jimmy.domain.UGoods;
+import com.jimmy.domain.UOrders;
 import com.jimmy.domain.UUsers;
+import com.jimmy.service.IUGoodsService;
+import com.jimmy.service.IUOrdersService;
 import com.jimmy.service.IUUsersService;
 import com.jimmy.utils.BCryptPasswordUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 
 @Controller
@@ -23,6 +29,25 @@ public class PersonalPageController {
 
     @Autowired
     private IUUsersService service;
+    @Autowired
+    private IUGoodsService goodsService;
+    @Autowired
+    private IUOrdersService ordersService;
+
+    @RequestMapping("/personalMsg")
+    public ModelAndView personalMsg() throws Exception{
+        ModelAndView mv = new ModelAndView();
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if(principal instanceof UserDetails){
+            String username = ((UserDetails) principal).getUsername();
+            UUsers user = getUser(username);
+
+            mv.addObject("user", user);
+        }
+
+        mv.setViewName("personalMsg");
+        return mv;
+    }
 
     @RequestMapping("/")
     public ModelAndView personal() throws Exception {
@@ -31,7 +56,21 @@ public class PersonalPageController {
         if(principal instanceof UserDetails){
             String username = ((UserDetails) principal).getUsername();
             UUsers user = getUser(username);
-            mv.addObject("", user);
+            List<UOrders> ordersList = ordersService.findByUserid(user.getId());
+
+            List<UOrders> collect = ordersList.parallelStream().peek(x -> {
+                try {
+                    UGoods byId = goodsService.getById(x.getGoodsid());
+                    x.setGoods_thumb_img(byId.getThumb_img());
+                    x.setGoods_name(byId.getName());
+                    x.setGoods_discount(byId.getDiscount());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }).collect(Collectors.toList());
+
+            mv.addObject("orderList", collect);
+            mv.addObject("user", user);
         }
 
         mv.setViewName("personal");
@@ -58,7 +97,6 @@ public class PersonalPageController {
         if(principal instanceof UserDetails){
             String username = ((UserDetails) principal).getUsername();
             UUsers user = getUser(username);
-            user.setAddress(users.getAddress());
             user.setEmail(users.getEmail());
             user.setGender(users.getGender());
             user.setTelephone(users.getTelephone());

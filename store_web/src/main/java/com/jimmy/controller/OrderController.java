@@ -1,11 +1,14 @@
 package com.jimmy.controller;
 
 import com.jimmy.domain.UGoods;
+import com.jimmy.domain.UGoodsSell;
 import com.jimmy.domain.UOrders;
 import com.jimmy.domain.UUsers;
+import com.jimmy.service.IUGoodsSellService;
 import com.jimmy.service.IUGoodsService;
 import com.jimmy.service.IUOrdersService;
 import com.jimmy.service.IUUsersService;
+import com.jimmy.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.core.Authentication;
@@ -14,13 +17,11 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -36,6 +37,20 @@ public class OrderController {
     private IUUsersService usersService;
     @Autowired
     private IUGoodsService goodsService;
+    @Autowired
+    private IUGoodsSellService goodsSellService;
+
+    @ResponseBody
+    @RequestMapping("/doReceive")
+    public void receive(@RequestParam("orderid")Integer id) throws Exception{
+        ordersService.receive(id);
+    }
+
+    @ResponseBody
+    @RequestMapping("/doCancel")
+    public void cancel(@RequestParam("orderid")Integer id) throws Exception{
+        ordersService.cancel(id);
+    }
 
     @RequestMapping("/")
     public ModelAndView order() throws Exception{
@@ -122,6 +137,12 @@ public class OrderController {
         Arrays.asList(ids).parallelStream().forEach(x -> {
             try {
                 ordersService.paid(x);
+
+                UOrders byId = ordersService.findById(x);
+                UGoods goods = goodsService.getById(byId.getId());
+                UGoodsSell sell = goodsSellService.getSell(goods.getId(), DateUtils.getDateNowStr("yyyy-MM"));
+                goodsSellService.updateSell(sell.getId(), sell.getSell() + byId.getCount());
+
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -114,7 +115,29 @@ public class GoodsController {
         return modelAndView;
     }
 
-    private List<UGoodsType> getGoodsType() throws Exception {
-        return typeService.getAll();
+    private List<List<UGoodsType>> getGoodsType() throws Exception {
+        List<UGoodsType> all = typeService.getAll();
+        List<List<UGoodsType>> list = new ArrayList<>();
+
+        for(int page = 0; page < getPageMax(all.size(), 8); page++) {
+            List<UGoodsType> goodsTypes = new ArrayList<>();
+            for (int i = page * 8; i < (page+1)* 8; i++) {
+                if(all.get(i) != null){
+                    goodsTypes.add(all.get(i));
+                }
+            }
+            list.add(goodsTypes);
+        }
+
+        return list;
+    }
+
+    private Integer getPageMax(Integer size, Integer step) throws Exception{
+        int pagemax = 0;
+        pagemax = size / step;
+        if(size % step != 0)
+            pagemax += 1;
+
+        return pagemax;
     }
 }
