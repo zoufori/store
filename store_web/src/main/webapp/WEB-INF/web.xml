@@ -92,17 +92,9 @@
         <servlet-name>dispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-    <error-page>
+<!--    <error-page>
         <error-code>404</error-code>
         <location>/404.jsp</location>
-    </error-page>
+    </error-page>-->
     <display-name>Archetype Created Web Application</display-name>
-    <welcome-file-list>
-        <welcome-file>web/web/index.html</welcome-file>
-        <welcome-file>web/index.htm</welcome-file>
-        <welcome-file>web/index.jsp</welcome-file>
-        <welcome-file>web/default.html</welcome-file>
-        <welcome-file>web/default.htm</welcome-file>
-        <welcome-file>web/default.jsp</welcome-file>
-    </welcome-file-list>
 </web-app>

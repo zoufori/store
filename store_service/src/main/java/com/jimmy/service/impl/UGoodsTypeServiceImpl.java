@@ -25,4 +25,9 @@ public class UGoodsTypeServiceImpl implements IUGoodsTypeService {
     public List<UGoodsType> getElderParent() throws Exception {
         return goodsTypeDao.getElderParent();
     }
+
+    @Override
+    public UGoodsType getById(Integer id) throws Exception {
+        return goodsTypeDao.getById(id);
+    }
 }

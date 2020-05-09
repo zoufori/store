@@ -25,13 +25,15 @@
                 <!--个人信息-->
                 <div class="Personal_info" id="Personal">
                     <ul class="xinxi">
+                        <li><label>账户余额:</label><span>${user.money}</span></li>
+                        <li><label>地址:</label><span>${user.address}</span></li>
                         <form action="${pageContext.request.contextPath}/personal/doAlterInfo" method="post">
                             <li><label>用户名：</label> <span><input name="username" type="text" value="${user.username}"
                                                                  class="text" disabled="disabled"/></span></li>
                             <li><label>用户性别：</label> <span class="sex">${user.genderStr}</span>
                                 <div class="add_sex">
-                                    <c:if test="${user.gender == 0}">
-                                        <input type="radio" name="gender" value="0" checked="checked">
+                                    <c:if test="${user.gender == 3}">
+                                        <input type="radio" name="gender" value="3" checked="checked">
                                         保密&nbsp;&nbsp;
                                         <input type="radio" id="" name="gender" value="1">
                                         男&nbsp;&nbsp;
@@ -39,7 +41,7 @@
                                         女&nbsp;&nbsp;
                                     </c:if>
                                     <c:if test="${user.gender == 1}">
-                                        <input type="radio" name="gender" value="0">
+                                        <input type="radio" name="gender" value="3">
                                         保密&nbsp;&nbsp;
                                         <input type="radio" id="" name="gender" value="1" checked="checked">
                                         男&nbsp;&nbsp;
@@ -47,7 +49,7 @@
                                         女&nbsp;&nbsp;
                                     </c:if>
                                     <c:if test="${user.gender == 2}">
-                                        <input type="radio" name="gender" value="0">
+                                        <input type="radio" name="gender" value="3">
                                         保密&nbsp;&nbsp;
                                         <input type="radio" id="" name="gender" value="1">
                                         男&nbsp;&nbsp;

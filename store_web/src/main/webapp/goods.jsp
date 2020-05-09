@@ -114,12 +114,12 @@
                         <li class="gl-item">
                             <em class="icon_special tejia"></em>
                             <div class="Borders">
-                                <div class="img"><a href="goodsDetail.jsp" target="_blank"><img
+                                <div class="img"><a href="${pageContext.request.contextPath}/goodsDetail/?goodsid=${list.id}" target="_blank"><img
                                         src="${pageContext.request.contextPath}/img/${list.thumb_img}"
                                         style="width:220px;height:220px"></a>
                                 </div>
                                 <div class="Price"><b>¥${list.discount}</b></div>
-                                <div class="name"><a href="goodsDetail.jsp" target="_blank">${list.name}</a></div>
+                                <div class="name"><a href="${pageContext.request.contextPath}/goodsDetail/?goodsid=${list.id}" target="_blank">${list.name}</a></div>
                             </div>
                         </li>
                     </c:forEach>

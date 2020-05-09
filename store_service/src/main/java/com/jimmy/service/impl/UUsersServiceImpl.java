@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class UUsersServiceImpl implements IUUsersService {
     @Override
     public Integer detractMoney(Integer total, Integer id) throws Exception {
         UUsers byId = usersDao.findById(id);
-        Integer money = byId.getMoney();
+        Double money = byId.getMoney();
         if(money < total) {
             return -1;
         } else {
@@ -73,9 +74,11 @@ public class UUsersServiceImpl implements IUUsersService {
 
         UUsers users;
         User user = null;
-        List<SimpleGrantedAuthority> authorities=null;
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        System.out.println(s);
         try {
             authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+            System.out.println(authorities.get(0));
             if(s.contains("@")){
                 users = usersDao.findByEmail(s);
                 user = new User(users.getEmail(), users.getPassword(), users.getIs_ban() == 2, true, true,true, authorities);

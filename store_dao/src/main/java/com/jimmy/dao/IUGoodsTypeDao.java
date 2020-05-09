@@ -19,4 +19,7 @@ public interface IUGoodsTypeDao {
 
     @Select("select * from u_goodstype where parent = NULL")
     List<UGoodsType> getElderParent() throws Exception;
+
+    @Select("select * from u_goodstype where id = #{id}")
+    UGoodsType getById(Integer id) throws Exception;
 }

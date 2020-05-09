@@ -54,13 +54,13 @@
                         <span style="margin-left:35px;float: left; ">
           <input type="button" class="detract" value="-"
                  style=" color:#333333;height:30px;width:20px;border-style:solid;margin-left:30px;"/>
-          <input type="text" class="countNum" value="${orderList.count}"
+          <input type="text" class="countNum" value="${list.count}"
                  style=" color:#333333;height:30px;width:30px;text-align:center;"/>
           <input type="button" value="+" class="add" style=" color:#333333;height:30px;width:20px;border-style:solid;"/>
         </span>
                         <span style="margin-left:10px;float: left;">
                     <font style="font-size: 14px;color: #FD3C0D;margin-left: 85px;font-weight: bold;  "
-                          class="total">${list.discount * orderList.count}</font>l
+                          class="total">${list.discount * list.count}</font>l
         </span>
                         <span style="margin-left:85px; float: left;">
                     <a href="#" onclick=""><font style="font-size: 14px;color: #1E1E1E; ">删除</font></a>
@@ -94,7 +94,7 @@
                         <th style="line-height:50px; ">
                             <span style="font-size: 18px;color:#FD3C0D;" class="totalNum">￥${total}</span></th>
                         <th style="line-height:50px; "><font
-                                style="font-size: 20px;margin-left:43px;color: #949494; "><a href="#" id="check">结算</a></font></th>
+                                style="font-size: 20px;margin-left:43px;color: #949494; "><a href="" id="check">结算</a></font></th>
                     </tr>
                 </table>
             </div>
@@ -112,11 +112,11 @@
         let total = $('.totalNum').val();
 
         $.ajax({
-            url: "/order/doPay",
+            url: "http://localhost:8080/store_web/order/doPay",
             type:"post",
             data:{
-                ids : ids,
-                total: total
+                "ids" : ids,
+                "total": total
             },
             success: function(data){
                 window.location.href = "";
@@ -137,11 +137,12 @@
         let countNum = $('#countNum').val();
         let orderid = $('#orderid').val();
         $.ajax({
-            url: '/order/addCount',
+            url: 'http://localhost:8080/store_web/order/addCount',
             type: 'post',
+            dataType: 'json',
             data: {
-                countNum: countNum,
-                orderid: orderid
+                "count": countNum,
+                "orderid": orderid
             },
             success: function (data) {
                 $(this).sibling('.countNum').val(data);
@@ -155,11 +156,11 @@
         let countNum = $('#countNum').val();
         let orderid = $('#orderid').val();
         $.ajax({
-            url: '/order/detractCount',
+            url: 'http://localhost:8080/store_web/order/detractCount',
             type: 'post',
             data: {
-                countNum: countNum,
-                orderid: orderid
+                "count": countNum,
+                "orderid": orderid
             },
             success: function (data) {
                 $(this).sibling('.countNum').val(data);

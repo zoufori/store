@@ -21,7 +21,7 @@ public class RegisterController {
     public ModelAndView register() throws Exception{
         ModelAndView mv = new ModelAndView();
 
-        mv.setViewName("register");
+        mv.setViewName("/register");
         return mv;
     }
 
@@ -32,13 +32,13 @@ public class RegisterController {
         users.setUsername(users.getEmail());
         users.setRole("USER");
         users.setGender(3);
-        users.setMoney(0);
+        users.setMoney(0d);
         users.setIs_ban(2);
-        users.setHead_img("0d76022d-a7d7-4fa3-a08e-9af2f76ab79c.jpg");
+        users.setHead_img("186fc545-7a78-4a5e-b358-7b341a11a874.jpg");
 
         service.register(users);
 
-        return "redirect:localhost:8080/store_web/login.jsp";
+        return "redirect:http://localhost:8080/store_web/login.jsp";
     }
 
 }

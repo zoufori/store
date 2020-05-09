@@ -82,11 +82,12 @@ public class OrderController {
 
             });
 
+            mv.addObject("user", user);
             mv.addObject("orderTimeList", orderTime);
             mv.addObject("orderList", byUserid);
 
         }
-        mv.setViewName("orders");
+        mv.setViewName("/orders");
         return mv;
     }
 
@@ -103,7 +104,9 @@ public class OrderController {
             List<UOrders> byUserIdAndInCart = ordersService.findByUserIdAndInCart(user1.getId());
             List<UGoods> goods = byUserIdAndInCart.parallelStream().map(x -> {
                 try {
-                    return goodsService.getById(x.getGoodsid());
+                    UGoods byId = goodsService.getById(x.getGoodsid());
+                    byId.setCount(x.getCount());
+                    return byId;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -111,7 +114,7 @@ public class OrderController {
             }).collect(Collectors.toList());
 
             for (int i = 0; i < goods.size(); i++) {
-                total += goods.get(i).getPrice() * byUserIdAndInCart.get(i).getCount();
+                total += goods.get(i).getDiscount() * goods.get(i).getCount();
             }
 
             mv.addObject("total", total);
@@ -119,7 +122,7 @@ public class OrderController {
             mv.addObject("cartList", byUserIdAndInCart);
         }
 
-        mv.setViewName("cart");
+        mv.setViewName("/cart");
         return mv;
     }
 

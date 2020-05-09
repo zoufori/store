@@ -18,7 +18,7 @@
             <span data-placeholder="邮箱"></span>
         </div>
         <div class="txtb">
-            <input type="password" name="telephone">
+            <input type="text" name="telephone">
             <span data-placeholder="手机"></span>
         </div>
         <div class="txtb">
@@ -33,7 +33,7 @@
         <input type="submit" class="logbtn" value="注册">
 
         <div class="bottom-text">
-            已有账户?立即<a href="#">登录</a>
+            已有账户?立即<a href="${pageContext.request.contextPath}/login.jsp">登录</a>
         </div>
     </form>
 

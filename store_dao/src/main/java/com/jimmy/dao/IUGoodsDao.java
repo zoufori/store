@@ -53,6 +53,6 @@ public interface IUGoodsDao {
             "date = #{date}," +
             "is_recommend = #{is_recommend}," +
             "month_sellid = #{month_sellid}" +
-            "where id = #{id}")
+            " where id = #{id}")
     Integer update(UGoods goods) throws Exception;
 }

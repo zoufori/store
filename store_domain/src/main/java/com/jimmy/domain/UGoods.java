@@ -11,6 +11,7 @@ public class UGoods {
     private Integer id;
     private String name;
     private Integer typeid;
+    private String typeStr;
     private Double discount;
     private Double price;
     private String desc;
@@ -21,12 +22,29 @@ public class UGoods {
     private String content;
     private Integer commentid;
     private Integer inventory;
-    private Long clicked;
+    private Long clicked = 0L;
     private String address;
     private Date date;
     private String dateStr;
     private Integer is_recommend;
     private Integer month_sellid;
+    private Integer count;
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    public String getTypeStr() {
+        return typeStr;
+    }
+
+    public void setTypeStr(String typeStr) {
+        this.typeStr = typeStr;
+    }
 
     public Integer getId() {
         return id;
@@ -118,6 +136,9 @@ public class UGoods {
     }
 
     public Long getClicked() {
+        if(clicked == null){
+            clicked = 0L;
+        }
         return clicked;
     }
 

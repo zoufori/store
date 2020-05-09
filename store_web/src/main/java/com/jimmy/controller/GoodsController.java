@@ -38,7 +38,7 @@ public class GoodsController {
 
         modelAndView.addObject("typeList", getGoodsType());
         modelAndView.addObject("goodsList", pageInfo);
-        modelAndView.setViewName("goods");
+        modelAndView.setViewName("/goods");
 
         return modelAndView;
     }
@@ -51,7 +51,7 @@ public class GoodsController {
 
         modelAndView.addObject("typeList", getGoodsType());
         modelAndView.addObject("goodsList", pageInfo);
-        modelAndView.setViewName("goods");
+        modelAndView.setViewName("/goods");
 
         return modelAndView;
     }
@@ -73,7 +73,7 @@ public class GoodsController {
     @ResponseBody
     @RequestMapping("/doAddGoods")
     public void doAddGoods(UGoods goods, @RequestParam("img_url") MultipartFile img, @RequestParam("content_img_url") MultipartFile content, HttpServletRequest request) throws Exception {
-        String realPath = request.getSession().getServletContext().getRealPath("/web/img");
+        String realPath = request.getSession().getServletContext().getRealPath("/img");
         String imgUrl = img.getOriginalFilename();
         String contentUrl = content.getOriginalFilename();
 
@@ -88,7 +88,7 @@ public class GoodsController {
 
         img.transferTo(imgFile);
         content.transferTo(contentFile);
-        String bigImgName = ImageUtils.imageChange(realPath, newImgName, 100, 100);
+        String bigImgName = ImageUtils.imageChange(realPath, newImgName, 365, 365);
         System.out.println(bigImgName);
 
         goods.setBig_img(bigImgName);
@@ -110,7 +110,7 @@ public class GoodsController {
 
         modelAndView.addObject("typeList", getGoodsType());
         modelAndView.addObject("goodsList", pageInfo);
-        modelAndView.setViewName("goods");
+        modelAndView.setViewName("/goods");
 
         return modelAndView;
     }
@@ -122,6 +122,8 @@ public class GoodsController {
         for(int page = 0; page < getPageMax(all.size(), 8); page++) {
             List<UGoodsType> goodsTypes = new ArrayList<>();
             for (int i = page * 8; i < (page+1)* 8; i++) {
+                if(all.size() <= i)
+                    break;
                 if(all.get(i) != null){
                     goodsTypes.add(all.get(i));
                 }

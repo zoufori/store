@@ -16,7 +16,7 @@
     <jsp:include page="_header.jsp" />
 
     <div style="height: 500px">
-        <p style="font-size: 50px; font-weight: bolder; position: relative; top: 100px; left: 40%; color: #e46d1d">404 找不到页面</p>
+        <p style="font-size: 50px; font-weight: bolder;text-align: center;line-height: 500px;color: #e46d1d">404 找不到页面</p>
     </div>
 
     <jsp:include page="_footer.jsp" />

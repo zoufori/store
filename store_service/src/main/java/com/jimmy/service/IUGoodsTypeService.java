@@ -10,5 +10,5 @@ public interface IUGoodsTypeService {
 
     List<UGoodsType> getElderParent() throws Exception;
 
-
+    UGoodsType getById(Integer id) throws Exception;
 }

@@ -45,7 +45,7 @@ public class PersonalPageController {
             mv.addObject("user", user);
         }
 
-        mv.setViewName("personalMsg");
+        mv.setViewName("/personalMsg");
         return mv;
     }
 
@@ -73,7 +73,7 @@ public class PersonalPageController {
             mv.addObject("user", user);
         }
 
-        mv.setViewName("personal");
+        mv.setViewName("/personal");
         return mv;
     }
 
@@ -84,11 +84,24 @@ public class PersonalPageController {
         if(principal instanceof UserDetails){
             String username = ((UserDetails) principal).getUsername();
             UUsers user = getUser(username);
-            mv.addObject("", user);
+            mv.addObject("user", user);
         }
 
-        mv.setViewName("alterInfo");
+        mv.setViewName("/address");
         return mv;
+    }
+
+    @RequestMapping("/doAlterAddress")
+    public String doAlterAddress(@RequestParam("address")String address) throws Exception{
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if(principal instanceof UserDetails) {
+            String username = ((UserDetails) principal).getUsername();
+            UUsers user = getUser(username);
+
+            user.setAddress(address);
+            service.saveOrUpdate(user);
+        }
+        return "redirect:personalMsg";
     }
 
     @RequestMapping("/doAlterInfo")
@@ -103,7 +116,7 @@ public class PersonalPageController {
             user.setUsername(users.getUsername());
             service.update(user);
         }
-        return "redirect:";
+        return "redirect:personalMsg";
     }
 
     @RequestMapping("/doHeadImageChange")
@@ -126,7 +139,7 @@ public class PersonalPageController {
             service.update(user);
         }
 
-        return "redirect:";
+        return "redirect:personalMsg";
     }
 
     @ResponseBody

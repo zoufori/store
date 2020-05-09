@@ -4,7 +4,7 @@ public class UGoodsType {
 
     private Integer id;
     private String name;
-    private Integer parent;
+    private String parent;
     private String url;
 
     public Integer getId() {
@@ -23,11 +23,11 @@ public class UGoodsType {
         this.name = name;
     }
 
-    public Integer getParent() {
+    public String getParent() {
         return parent;
     }
 
-    public void setParent(Integer parent) {
+    public void setParent(String parent) {
         this.parent = parent;
     }
 

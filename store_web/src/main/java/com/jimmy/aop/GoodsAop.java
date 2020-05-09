@@ -15,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -32,19 +34,21 @@ public class GoodsAop {
 
     @Before("execution(* com.jimmy.controller.GoodsDetailController.show(..))")
     public void doBefore(JoinPoint jp) throws Exception{
-        Integer id = (Integer) request.getAttribute("id");
+        Object[] args = jp.getArgs();
+        Integer id = (Integer)args[0];
+
         List<UGoodsSell> byGoodsid = goodsSellService.getByGoodsid(id);
 
         boolean r = byGoodsid.parallelStream().anyMatch(x ->
                 DateUtils.date2String(new Date(), "yyyy-MM").equals(DateUtils.date2String(x.getDate(), "yyyy-MM"))
         );
-
+        System.out.println("asdcasdcjashdbcajsdcas");
         if (!r){
             UGoodsSell goodsSell = new UGoodsSell();
             goodsSell.setDate(new Date());
             goodsSell.setGoodsid(id);
             goodsSell.setSell(0);
-
+            System.out.println("asdcasdcjashdbcajsdcas++++++++++++++++++++++++");
             goodsSellService.saveSell(goodsSell);
         }
     }
@@ -60,10 +64,12 @@ public class GoodsAop {
 
             }
         }*/
-        Integer id = (Integer)request.getAttribute("id");
+        Object[] args = jp.getArgs();
+        Integer id = (Integer) args[0];
         UGoods goods = goodsService.getById(id);
 
         goods.setClicked(goods.getClicked()+1);
+        goodsService.saveOrUpdate(goods);
     }
 
 }

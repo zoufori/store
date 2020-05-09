@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.jimmy.utils.DateUtils" %><%--
   Created by IntelliJ IDEA.
   User: i、
   Date: 2020/5/8
@@ -21,7 +21,7 @@
                 <p><span class="name">${user.username}</span><a
                         href="${pageContext.request.contextPath}/personal/personalMsg" title="修改信息">[修改信息]</a>
                 </p>
-                <p>访问时间：2020-2-20 20:20</p>
+                <p>访问时间：<%=DateUtils.getDateNowStr("yyyy-MM-dd")%></p>
             </div>
         </div>
         <div class="sideMen">
@@ -30,8 +30,8 @@
                 <dt class="transaction_manage"><em class="icon_1"></em>订单管理</dt>
                 <dd>
                     <ul>
-                        <li><a href="orders.jsp">我的订单</a></li>
-                        <li><a href="address.jsp">收货地址</a></li>
+                        <li><a href="${pageContext.request.contextPath}/order/">我的订单</a></li>
+                        <li><a href="${pageContext.request.contextPath}/personal/alterInfo">收货地址</a></li>
                         <li><a href="用户中心-产品预订.html">产品预订</a></li>
                     </ul>
                 </dd>
@@ -54,7 +54,7 @@
                 <dd>
                     <ul>
                         <li><a href="用户中心-账户管理.html">账户余额</a></li>
-                        <li><a href="用户中心-消费记录.html">消费记录</a></li>
+                        <li><a href="${pageContext.request.contextPath}/order/">消费记录</a></li>
                         <li><a href="#">跟踪包裹</a></li>
                         <li><a href="#">资金管理</a></li>
                     </ul>

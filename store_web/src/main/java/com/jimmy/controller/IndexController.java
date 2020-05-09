@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/")
@@ -27,6 +28,17 @@ public class IndexController {
         List<UGoodsType> goodsTypes = goodsTypeService.getAll();
         List<UGoods> hotGoods = goodsService.getHotGoods();
         List<UGoods> recommendedGoods = goodsService.getRecommendedGoods();
+        recommendedGoods = recommendedGoods.parallelStream().peek(x -> {
+
+            try {
+                UGoodsType byId = goodsTypeService.getById(x.getTypeid());
+                x.setTypeStr(byId.getName());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }).collect(Collectors.toList());
+        hotGoods.add(hotGoods.get(0));
 
         mv.addObject("goodstype", goodsTypes);
         mv.addObject("hgoods", hotGoods);

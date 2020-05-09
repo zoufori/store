@@ -2,6 +2,7 @@ package com.jimmy.dao;
 
 import com.jimmy.domain.UOrders;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.core.annotation.Order;
@@ -14,7 +15,7 @@ public interface IUOrdersDao {
     @Insert("insert into u_orders" +
             "(userid, goodsid, order_time, count, receive_time, is_cart, is_paid, is_cancel)" +
             "values" +
-            "(#{userid},#{goodsid},#{order_time},#{count},#{receive_time},#{is_cart},#{is_paid},#{is_cancel})")
+            "(#{usersid},#{goodsid},#{order_time},#{count},#{receive_time},#{is_cart},#{is_paid},#{is_cancel})")
     Integer save(UOrders orders) throws Exception;
 
     @Update("update u_orders set" +
@@ -28,7 +29,7 @@ public interface IUOrdersDao {
             "receive_time = #{receive_time}" +
             "where" +
             "id = #{id}")
-    Integer receive(Integer id, Date receive_time) throws Exception;
+    Integer receive(@Param("id") Integer id, @Param("receive_time")Date receive_time) throws Exception;
 
     @Update("update u_orders set" +
             "is_cancel = 1" +
@@ -40,7 +41,7 @@ public interface IUOrdersDao {
             "count = #{count}" +
             "where" +
             "id = #{orderid}")
-    Integer changeCount(Integer count, Integer orderid) throws Exception;
+    Integer changeCount(@Param("count") Integer count, @Param("orderid") Integer orderid) throws Exception;
 
     @Select("select * from u_orders where id = #{id}")
     UOrders findById(Integer id) throws Exception;

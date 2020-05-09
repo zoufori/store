@@ -2,6 +2,7 @@ package com.jimmy.dao;
 
 import com.jimmy.domain.UUsers;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -19,7 +20,7 @@ public interface IUUsersDao {
     UUsers findById(Integer id) throws Exception;
 
     @Insert("insert into u_users" +
-            "(username, password, telephone, email, head_img, gender, address, role, money, date, is_ban) values" +
+            "(username, password, telephone, email, head_img, gender, address, money, role, date, is_ban) values" +
             "(#{username},#{password}, #{telephone}, #{email}, #{head_img}, #{gender}, #{address}, #{money}, #{role}, #{date}, #{is_ban})")
     Integer save(UUsers users) throws Exception;
 
@@ -38,5 +39,5 @@ public interface IUUsersDao {
     Integer update(UUsers users) throws Exception;
 
     @Update("update u_users set money = #{money} where id = #{id}")
-    Integer detractMoney(Integer money, Integer id) throws Exception;
+    Integer detractMoney(@Param("money") Double money, @Param("id") Integer id) throws Exception;
 }

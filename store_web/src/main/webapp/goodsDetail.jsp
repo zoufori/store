@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <jsp:include page="_meta.jsp" />
+    <jsp:include page="_meta.jsp"/>
     <title>产品-产品详情</title>
     <script type="text/javascript">
         //弹出隐藏层
@@ -27,7 +27,7 @@
 
 <body>
 
-<jsp:include page="_header.jsp" />
+<jsp:include page="_header.jsp"/>
 
 <div class="clear">&nbsp;</div>
 
@@ -73,9 +73,9 @@
             <div class="clear"></div>
             <div class="pro_detail_number margin-t30">
                 <div class="margin-r20 float-lt">数量</div>
-                <div class=""><i class="jian"></i>
-                    <input type="text" value="1" class="float-lt choose_input"/>
-                    <i class="jia"></i> <span>&nbsp;盒</span> <span>（库存${goods.inventory}盒）</span></div>
+                <div class=""><a href="" id="subtract"> <i class="jian"></i></a>
+                    <input type="text" id="value" value="1" class="float-lt choose_input"/>
+                    <a href="" id="add"> <i class="jia"></i> </a><span>&nbsp;盒</span> <span>（库存${goods.inventory}盒）</span></div>
                 <div class="clear"></div>
             </div>
             <div class="pro_detail_number margin-t20">
@@ -85,14 +85,38 @@
             <div class="clear"></div>
             <div class="pro_detail_btn margin-t30">
                 <ul>
-                    <li class="pro_detail_shop"><a href="pay1.html">立即购买</a></li>
-                    <li class="pro_detail_add"><a href="#" onclick="ShowDiv('MyDiv','fade')">加入我的货仓</a></li>
+                    <li class="pro_detail_shop"><a
+                            href="${pageContext.request.contextPath}/goodsDetail/doAddCart?goodsid=${goods.id}" id="buy">立即购买</a>
+                    </li>
+                    <li class="pro_detail_add"><a
+                            href="${pageContext.request.contextPath}/goodsDetail/doAddCart?goodsid=${goods.id}"
+                            onclick="ShowDiv('MyDiv','fade')" id="addCart">加入我的货仓</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="clear"></div>
     <script>
+        $('#buy').click(function () {
+            let attr = $(this).attr("href");
+            var newUrl = attr + "&count=" + $('#value').val();
+
+            $(this).attr("href", newUrl);
+        });
+        $('#addCart').click(function () {
+            let attr = $(this).attr("href");
+            var newUrl = attr + "&count=" + $('#value').val();
+
+            $(this).attr("href", newUrl);
+        });
+        $('#add').click(function () {
+            var raw = $('#value').val();
+            $('#value').val(raw + 1);
+        });
+        $('#subtract').click(function () {
+            var raw = $('#value').val();
+            $('#value').val(raw - 1);
+        });
         $(function () {
             $(".pro_tab li").each(function (i) {
                 $(this).click(function () {
@@ -106,147 +130,30 @@
         <div class="pro_tab">
             <ul>
                 <li class="cur">产品介绍</li>
-                <li>规格及包装</li>
                 <li>评价</a></li>
             </ul>
         </div>
         <div class="conlist">
-            <div class="conbox" style="display:block;">1</div>
-            <div class="conbox">2</div>
+            <div class="conbox" style="display:block;">${goods.content}</div>
 
             <!--评论区-->
             <div class="conbox">
                 <div class="pro_judge">
-                    <ul>
-                        <li class="cur">
-                            <input name="RadioGroup1" type="radio" value="" checked="checked" id="RadioGroup1_0"/>
-                            全部（100）
-                        </li>
-                        <li>
-                            <input name="RadioGroup1" type="radio" value="" id="RadioGroup1_1"/>
-                            好评（80）
-                        </li>
-                        <li>
-                            <input name="RadioGroup1" type="radio" value="" id="RadioGroup1_2"/>
-                            中评（10）
-                        </li>
-                        <li>
-                            <input name="RadioGroup1" type="radio" value="" id="RadioGroup1_3"/>
-                            差评（10）
-                        </li>
-                    </ul>
                     <table width="100%" border="0">
-                        <tr>
-                            <td width="80" align="left"><a href="" rel="images/01_mid.jpg" class="preview"><img
-                                    src="images/01_mid.jpg" width="60" height="60" class="border_gry"/></a></td>
-                            <td>茶泡出来颜色很好！味道很清香！非常喜欢！包装也很精致，下次还来买！好评！<br/>
-                                <br/>
-                                <span class="pro_judge_time">2014.1.3</span></td>
-                            <td>张三</td>
-                        </tr>
-                        <tr>
-                            <td width="80" align="left"><a href="" rel="images/01_mid.jpg" class="preview"><img
-                                    src="images/01_mid.jpg" width="60" height="60" class="border_gry"/></a></td>
-                            <td>茶泡出来颜色很好！味道很清香！非常喜欢！包装也很精致，下次还来买！好评！<br/>
-                                <br/>
-                                <span class="pro_judge_time">2014.1.3</span></td>
-                            <td>张三</td>
-                        </tr>
-                        <tr>
-                            <td width="80" align="left"><a href="" rel="images/01_mid.jpg" class="preview"><img
-                                    src="images/01_mid.jpg" width="60" height="60" class="border_gry"/></a></td>
-                            <td>茶泡出来颜色很好！味道很清香！非常喜欢！包装也很精致，下次还来买！好评！<br/>
-                                <br/>
-                                <span class="pro_judge_time">2014.1.3</span></td>
-                            <td>张三</td>
-                        </tr>
-                        <tr>
-                            <td width="80" align="left"><a href="" rel="images/01_mid.jpg" class="preview"><img
-                                    src="images/01_mid.jpg" width="60" height="60" class="border_gry"/></a></td>
-                            <td>茶泡出来颜色很好！味道很清香！非常喜欢！包装也很精致，下次还来买！好评！<br/>
-                                <br/>
-                                <span class="pro_judge_time">2014.1.3</span></td>
-                            <td>张三</td>
-                        </tr>
-                        <tr>
-                            <td width="80" align="left"><a href="" rel="images/01_mid.jpg" class="preview"><img
-                                    src="images/01_mid.jpg" width="60" height="60" class="border_gry"/></a></td>
-                            <td>茶泡出来颜色很好！味道很清香！非常喜欢！包装也很精致，下次还来买！好评！<br/>
-                                <br/>
-                                <span class="pro_judge_time">2014.1.3</span></td>
-                            <td>张三</td>
-                        </tr>
-                        <tr>
-                            <td width="80" align="left"><a href="" rel="images/01_mid.jpg" class="preview"><img
-                                    src="images/01_mid.jpg" width="60" height="60" class="border_gry"/></a></td>
-                            <td>茶泡出来颜色很好！味道很清香！非常喜欢！包装也很精致，下次还来买！好评！<br/>
-                                <br/>
-                                <span class="pro_judge_time">2014.1.3</span></td>
-                            <td>张三</td>
-                        </tr>
-                        <tr>
-                            <td width="80" align="left"><a href="" rel="images/01_mid.jpg" class="preview"><img
-                                    src="images/01_mid.jpg" width="60" height="60" class="border_gry"/></a></td>
-                            <td>茶泡出来颜色很好！味道很清香！非常喜欢！包装也很精致，下次还来买！好评！<br/>
-                                <br/>
-                                <span class="pro_judge_time">2014.1.3</span></td>
-                            <td>张三</td>
-                        </tr>
-                        <tr>
-                            <td width="80" align="left"><a href="" rel="images/01_mid.jpg" class="preview"><img
-                                    src="images/01_mid.jpg" width="60" height="60" class="border_gry"/></a></td>
-                            <td>茶泡出来颜色很好！味道很清香！非常喜欢！包装也很精致，下次还来买！好评！<br/>
-                                <br/>
-                                <span class="pro_judge_time">2014.1.3</span></td>
-                            <td>张三</td>
-                        </tr>
-                        <tr>
-                            <td width="80" align="left"><a href="" rel="images/01_mid.jpg" class="preview"><img
-                                    src="images/01_mid.jpg" width="60" height="60" class="border_gry"/></a></td>
-                            <td>茶泡出来颜色很好！味道很清香！非常喜欢！包装也很精致，下次还来买！好评！<br/>
-                                <br/>
-                                <span class="pro_judge_time">2014.1.3</span></td>
-                            <td>张三</td>
-                        </tr>
+                        <c:forEach items="${commentsList}" var="list">
+                            <tr>
+                                <td width="80" align="left"><a href=""
+                                                               rel="${pageContext.request.contextPath}/img/${list.user_head_img}"
+                                                               class="preview"><img
+                                        src="${pageContext.request.contextPath}/img/${list.user_head_img}" width="60" height="60" class="border_gry"/></a></td>
+                                <td>${list.content}<br/>
+                                    <br/>
+                                    <span class="pro_judge_time">${list.dateStr}</span></td>
+                                <td>${list.user_name}</td>
+                            </tr>
+                        </c:forEach>
                     </table>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="hotpro">
-        <div class="hotpro_title">热销产品</div>
-        <div class="hotpro_box">
-            <div class="pro-view-hot">
-                <ul>
-                    <li class="pro-img"><a href="#"><img src="images/pro-1.jpg"/></a></li>
-                    <li class="price"><strong>￥ 36.00</strong><span>已销售227</span></li>
-                    <li><a href="#" class="title">恒顺蜂蜜醋 10ml*24支 纯粮酿造 镇江香醋 江苏特产 礼盒礼品 </a></li>
-                </ul>
-                <ul>
-                    <li class="pro-img"><a href="#"><img src="images/pro-1.jpg"/></a></li>
-                    <li class="price"><strong>￥ 36.00</strong><span>已销售227</span></li>
-                    <li><a href="#" class="title">恒顺蜂蜜醋 10ml*24支 纯粮酿造 镇江香醋 江苏特产 礼盒礼品 </a></li>
-                </ul>
-                <ul>
-                    <li class="pro-img"><a href="#"><img src="images/pro-1.jpg"/></a></li>
-                    <li class="price"><strong>￥ 36.00</strong><span>已销售227</span></li>
-                    <li><a href="#" class="title">恒顺蜂蜜醋 10ml*24支 纯粮酿造 镇江香醋 江苏特产 礼盒礼品 </a></li>
-                </ul>
-                <ul>
-                    <li class="pro-img"><a href="#"><img src="images/pro-1.jpg"/></a></li>
-                    <li class="price"><strong>￥ 36.00</strong><span>已销售227</span></li>
-                    <li><a href="#" class="title">恒顺蜂蜜醋 10ml*24支 纯粮酿造 镇江香醋 江苏特产 礼盒礼品 </a></li>
-                </ul>
-                <ul>
-                    <li class="pro-img"><a href="#"><img src="images/pro-1.jpg"/></a></li>
-                    <li class="price"><strong>￥ 36.00</strong><span>已销售227</span></li>
-                    <li><a href="#" class="title">恒顺蜂蜜醋 10ml*24支 纯粮酿造 镇江香醋 江苏特产 礼盒礼品 </a></li>
-                </ul>
-                <ul style="margin-right:0;">
-                    <li class="pro-img"><a href="#"><img src="images/pro-1.jpg"/></a></li>
-                    <li class="price"><strong>￥ 36.00</strong><span>已销售227</span></li>
-                    <li><a href="#" class="title">恒顺蜂蜜醋 10ml*24支 纯粮酿造 镇江香醋 江苏特产 礼盒礼品 </a></li>
-                </ul>
             </div>
         </div>
     </div>
@@ -256,7 +163,7 @@
 
 
 <!--网站地图-->
-<jsp:include page="_footer.jsp" />
+<jsp:include page="_footer.jsp"/>
 
 
 <!--弹出层时背景层DIV-->

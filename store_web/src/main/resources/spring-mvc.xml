@@ -36,7 +36,12 @@
     <mvc:resources location="/css/" mapping="/css/**" />
     <mvc:resources location="/img/" mapping="/img/**" />
     <mvc:resources location="/js/" mapping="/js/**" />
+    <mvc:resources location="/AD/" mapping="/AD/**" />
     <mvc:resources location="/plugins/" mapping="/plugins/**" />
+    <mvc:resources location="/products/" mapping="/products/**" />
+    <mvc:resources location="/skins/" mapping="/skins/**" />
+    <mvc:resources location="/layer/" mapping="/layer/**" />
+    <mvc:resources location="/images/" mapping="/images/**" />
 
     <!-- 开启对SpringMVC注解的支持-->
     <mvc:annotation-driven />

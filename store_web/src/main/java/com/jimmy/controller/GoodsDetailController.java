@@ -9,10 +9,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/goodsDetail")
@@ -37,16 +39,26 @@ public class GoodsDetailController {
         String date = DateUtils.date2String(new Date(), "yyyy-MM");
         UGoodsSell sell = goodsSellService.getSell(goods.getId(), date);
 
+        comments = comments.parallelStream().peek(x -> {
+            try {
+                UUsers byId = usersService.findById(x.getUserid());
+                x.setUser_head_img(byId.getHead_img());
+                x.setUser_name(byId.getUsername());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).collect(Collectors.toList());
+
         mv.addObject("sell", sell.getSell());
         mv.addObject("commentsList", comments);
         mv.addObject("goods", goods);
-        mv.setViewName("goodsDetail");
+        mv.setViewName("/goodsDetail");
         return mv;
     }
 
     @RequestMapping("/doAddCart")
-    public void addCart(@RequestParam("goodsid") Integer id) throws Exception{
-        UOrders orders = null;
+    public String addCart(@RequestParam("goodsid") Integer id, @RequestParam("count")Integer count) throws Exception{
+        UOrders orders = new UOrders();
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (principal instanceof UserDetails){
@@ -58,8 +70,11 @@ public class GoodsDetailController {
             orders.setIs_paid(0);
             orders.setOrder_time(new Date());
             orders.setUsersid(user.getId());
+            orders.setCount(count);
             ordersService.save(orders);
         }
+
+        return "redirect:http://localhost:8080/store_web/order/cart";
     }
 
     private UUsers getUser(String username) throws Exception{
